@@ -1,0 +1,83 @@
+<!--
+Kristi Zwiener, assignment 3.2, Version 1.0.0.
+
+V1.0.0.
+In this HTML document version, I added:
+Palindrome checker created via HTML and Javascript.
+
+-->
+
+<!--
+Below sets the code language to english and sets us up. 
+These were done by using <! and then using the smart predictions of VSC.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Below here I use the <title> tag to change the title of the page. This does not display on the page itself, but
+    when played in a browser, the browser tab up above will display this text.-->
+
+    <title>Palin</title>
+
+<!--
+Below is how to link to a .css stylesheet
+rel = relation. 
+Choosing the relation to this document as "stylesheet" enables me to use the css I had made.
+
+Then below that, I link my script to my page. This is essential if I want to get my page to work using the javascript
+I created.
+-->
+
+ <link rel="Stylesheet" href="main.css">
+
+
+    <script src="code.js"></script>
+
+<!-- Here is a header that I place at the very top of my web page. The id I use is changed through the .css code
+ and it allows me to have multple different styles depending on what I attach that id to. -->
+
+    <h1 id="h1-diff">Palindromes</h1>
+
+</head>
+
+<!--
+<body></body>Everything in the body is what you see on the web page.
+-->
+
+<body>
+<div id="div-diff1">
+<!--Below is the start of my form. As stated before, when starting a form and having onsubmit, always be sure to
+have return set to false, otherwise the user will never be able to leave the page through the form!
+its always set to true by default, so that's something to remember!-->
+<br><br><br><br>
+    <form onsubmit = "return false">
+        Input a string          <input type = "text" id = "firststring"/>
+
+        <!--Below I link my function to my submit button on the form. Through this, I can call my function from my javascript.
+        What that function does is run through whether a word is a palindrome or not, and displays that information further below. -->
+        <input type = "submit" onclick =  "reverse();"/>
+
+<!--Below are audio tags. What I want to do here is call forth some fun audio for if a user types in a palindrome
+or not. Just something fun. I play these audios through my javascript, and they are also connected to my 
+function called above.-->
+
+        <audio id = "win">
+            <source src="8-bit-victory-sound-101319.mp3" type="Audio/mp3">
+        </audio>
+        <audio id = "lose">
+            <source src="notification-sound-error-sound-effect-203788.mp3" type="Audio/mp3">
+        </audio>
+    </form>
+    <!--Below is text that will display whether or not a user types and submits a palindrome, changed via the 
+    linked javascript function--><br><br><br><br>
+    <p id = "palin">  (A palindrome is when a word is the same backwards as it is forwards! Try it out!)</p>
+</div>
+</body>
+
+<!--Below is just my copyright. Sub tags make the text smaller. My navs are edited in css to appear to the left of the screen.-->
+
+<footer><nav><a href="Index.html"><button id="button3"><h2>Go back</h2></button></a></nav><p id="p-diff"><center>Copyright 2024 @KZ</center></p></footer>
+</html>

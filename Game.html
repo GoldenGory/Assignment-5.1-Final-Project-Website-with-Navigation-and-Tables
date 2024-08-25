@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--Below, I title the document. This shows up inside the browser's tab above.-->
+    <title>Dice roll game</title>
+
+<!--Here I link my stylesheet. I reuse my old .css since I have this game linked to my Index made previously.-->
+<link rel="Stylesheet" href="main.css">
+
+<!-- Here I then link my javascript code to my document. 
+ The reason why I use 'defer' in this tag is because I want my html and css to load first and foremost.-->
+<script defer src="code.js"></script>
+
+
+</head>
+
+<!-- While not necessary, I made multiple body id in my .css as I wanted multiple cursors when needed
+ for different pages. Pizzacursorbody is like the other body ids but i just changed the cursor. -->
+
+<body id="pizzacursorbody">
+
+    <!--This text appears at the very top of the body because I didn't place it inside of a div or add any breaks.
+    I wanted to tell the player what this game was about without hurting their eyes, so it's greyed out through the css.-->
+   
+    <h1 id="h1-game">Roll a higher number of dice than me to win!</h1>
+
+    <!--Here is where I finally begin to make my game. I create various ids to use within this code, as I will
+    want the .js to be able to change what is inside the tags that hold those ids-->
+
+    <div id="div-diff1">
+
+        <!-- Here is where Gir will roll his dice, with the '0' between <span> tags being where the result will be.
+            I use <span> tags here as they do not disrupt the theme of the page or the page layout-->
+
+        <br>My dice roll = <span id="GirRollsRes">0</span>
+
+<br><br><br><br><br> 
+
+<!--I use this id to tell this nav to remain to the right of the page; I wanted my average score to be
+somewhere more accessible-->
+
+
+
+<!-- Here is where it gets more interesting - My button needs to be clicked, right? But I also want to 
+ call in my .js somewhere. So in order to do that, I ask my script here to detect when I click this button (onclick),
+ then I link the function I want to have work through this action.
+ In this case, every time I click this button, I will activate my function in the .js and it will change elements inside
+ of my html document, perform basic math and logic, and then my game is played. See code.js for more info-->
+
+        <button id="buttonplay1" onclick="dice1()">
+            <h1>Roll dice</h1>
+        </button>    
+
+        <br><br>
+
+        Your dice roll = <span id="die1res">0</span> + <span id="die2res">0</span> = <span id="Sumres">0</span><br><br>
+        
+        Final result: <span id="FinalRes">0</span><br>
+    </div>
+
+    <br>
+    <br>
+   
+
+    
+</body>
+
+<!--Below here is the footer, where I create a new button with a simple link. While this button can be pressed, it's
+only ever activated through the actual linking process.
+For example, if I never linked anything to this button using href or <a> tags, I would not be able to 'click' the button
+    as its kind of...just a cosmetic item, mostly.
+    This button asks if a person wants to exit, as in return to my Index page.-->
+<footer>
+    <nav>
+        <a href="Index.html">
+            <button id="button3">
+               <h2> Exit</h2>
+            </button></a>
+        </nav> 
+        
+  <!--The <sub> tags simply make my texts smaller without fooling with ids or the .css document. 
+    While I could use font sizing, I find that simply writing sub is easier to remember...it's bad habit.
+    Another fun thing is the use of <sup>, but that floats the text up a bit much.
+        
+        Further below I have audio files hidden from the user in this page. I call those into my functions
+        in order to get them to play sounds depending on a win or loss!
+        this isnt the only way to add audio, as i can do it in functions as well,
+        but i find it easier to just call the element id itself and play it then just create the sound and play it 
+        using javascript-->
+    <sub>Copyright @KZwiener</sub></footer>
+    <audio id="wingayme">
+        <source src="gameboy-pluck-41265-[AudioTrimmer.com].mp3" type="audio/mp3">
+    </audio>
+    <audio id="losegayme">
+        <source src="impact-sound-effect-8-bit-retro-151796-[AudioTrimmer.com].mp3" type="audio/mp3">
+    </audio>
+    <audio id="itsdrawingtime">
+        <source src="8-bit-victory-sound-101319.mp3" type="audio/mp3">
+    </audio>
+</html>

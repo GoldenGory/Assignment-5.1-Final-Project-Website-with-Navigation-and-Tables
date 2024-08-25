@@ -1,0 +1,75 @@
+<!--
+
+Kristi Zwiener. N/A - No assignment for this one!
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 
+    Below we have the title of the document, which is what we see in the browser's tab above. 
+     Then it is all linked to the css and javascript files
+     -->
+
+    <title>MOAR WAFFLEZ! XD!!1!</title>
+    <link rel="Stylesheet" href="main.css">
+
+    <!-- 
+    This below loads in our javascript, which will handle our counter. 'defer' is something I learned;
+    what it does is allows my javascript to load last, allowing my html and css to load first on the page.
+    -->
+
+    <script defer src="code.js"></script>
+
+    <!-- 
+    Below we have Gir eating his waffles as a .mp4 file. I mark this as a <video>, and then use a source to call it.
+     Also, I link the background waffle in the css.
+     I'm still not that experienced with how to link a file from my pc on css, which is why it is a URL at this time.
+     -->
+
+     <video id='Girwaffles'>
+        <source src="GIRWAFFLESVID.mp4" type="video/mp4">
+    </video>
+    <audio id = 'feedinghimwaffles'>
+        <source src ="Heeatsawaffle.mp3" type = "audio/mp3">
+    </audio>
+<br>
+
+<!--
+Here we have the start of our 'box'; this will be our container for anything we want to put on the page.
+Otherwise, if we didn't have this or any styling choices, text will be directly on the waffle! 
+That would be totally unreadable. And sticky. Gross.
+-->
+
+<div id="div-diff1"><h1 id="h1-diff">Boy, I sure do LOVE waffles!!</h1><br><br>
+
+
+<!--
+    Below we finally start to label our counter through a new button id made in the css document.
+    using the id in javascript allows me to use it in the javascript code. Below, I also use an id for my <p> tags
+        this is where I plan to put the number of times a user clicks the button. -->
+
+    
+<button id="buttoncounter">Give me some waffles!</button><br><br>
+ 
+    <p>
+        
+        Waffles given : <span id="numberwaffles">0</span>
+
+
+    </p>
+
+</div>
+   
+
+</head>
+<body id="wafflebackground">
+    
+</body>
+<!-- Below is the footer. Here I add a back button below and a general copyright statement. -->
+<footer><nav><a href="Index.html"><button id="button3"><h2>Stop feeding me waffles?</h2></button></a></nav>Copyright @KZwiener</footer>
+</html>

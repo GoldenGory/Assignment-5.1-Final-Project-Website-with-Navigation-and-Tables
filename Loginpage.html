@@ -1,0 +1,87 @@
+<!--
+Kristi Zwiener.
+
+
+Below sets the code language to english and sets us up. 
+These were done by using <! and then using the smart predictions of VSC.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Below here I use the <title> tag to change the title of the page. This does not display on the page itself, but
+    when played in a browser, the browser tab up above will display this text.-->
+
+    <title>Log in</title>
+
+<!--
+Below is how to link to a .css stylesheet
+rel = relation. 
+Choosing the relation to this document as "stylesheet" enables me to use the css I had made.
+
+Then below that, I link my script to my page. This is essential if I want to get my page to work using the javascript
+I created.
+-->
+
+ <link rel="Stylesheet" href="main.css">
+
+
+    <script src="code.js"></script>
+
+<!-- Here is a header that I place at the very top of my web page. The id I use is changed through the .css code
+ and it allows me to have multple different styles depending on what I attach that id to. -->
+
+    <h1 id="h1-diff">User login:</h1>
+
+</head>
+
+<!--
+<body></body>Everything in the body is what you see on the web page.
+-->
+
+<body>
+
+    <!--These are simple breaks in the page. Useful for prettying the page and spacing things further apart.-->
+    <br><br><br><br>
+
+<!--Below is the start of my form, where the user will be asked to input their name, last name, and zipcode in order
+to proceed to the index page. (If you spot any mention of a password, I admittedly created a username+password login at first.)
+
+as taken from my notes about a form's onsubmit return false: "Without that onsubmit return false, what that does is 
+returns true means you cannot navigate AWAY from this page. The return true is the DEFAULT of the forms tag, 
+which means that WITHOUT the return set to false, the user will not be able to navigate away if they enter 
+information into the form itself or activate something within the form that is meant to take them to another page."
+-->
+
+<form id="logins" onsubmit="return false">
+First name: <input type="text" id="username"/> Last name: <input type="text" id="username2"/>
+Zip code: <input type="number" id="zipcode"/>
+
+<!--Below is out submit button. We give it the type "submit" which shows it as a button to press in our form.
+I link my javascript function through that onclick; when the user clicks to submit their login information,
+what I want javascript to do is to run that information and check if it is right according to the rules
+I have set inside the javascript, then either deny running it with an error message OR play an alert that a user
+has logged in correctly and then bring that user to a new page (the index page)
+
+Below this input button, I also place a paragraph <p> with an id to tell it apart form any other paragraph 
+    I use on this page. That way, in the case I want to use my javascript again, it will know to only change the lettering
+    inside of the element id "longinstate", and not just every <p> paragraph. -->
+
+<input type = "submit" onclick = "checksub();">
+
+<p id="loginstate">Please log in to view the site.</p>
+
+</form>
+
+<!--Down below is my footer. Because the bottom of my page wasn't that far down because my page seems short,
+I simply use my <nav> tag used prior. I changed the alignment of these nav tags to appear to the left of the page.
+    That way my copyright notice won't get in the way.
+    
+    Use of <sub> tags just make the text smaller. 
+        <sub>  makes text small and float down, 
+            while <sup> would make text small and float up.-->
+</body>
+<footer><nav><sub><sub><sub>Copyright 2024 @KZ</sub></sub></sub></nav></footer>
+</html>

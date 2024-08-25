@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+
+<!--
+
+Kristi Zwiener, CSC102 FINAL. (assignment 5.1)
+Aug 25th, 2024.
+
+
+
+
+
+
+Below sets the code language to english and sets us up. 
+These were done by using <! and then using the smart predictions of VSC.
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--
+Below is how to link to a .css stylesheet
+rel = relation. 
+Choosing the relation to this document as "stylesheet" enables me to use the css I had made.
+
+Same as linking the javascript, but this will allow me to use javascript should I need it for this page in the future
+-->
+
+    <link rel="Stylesheet" href="main.css">
+    <script src="code.js"></script>
+
+<!--
+<title></title> This edits the browser tab's lettering. -->
+
+    <title>TACOEZZ XDD!!!11!</title></head>
+
+<!--
+<body></body>Everything in the body is what you see on the web page.
+-->
+
+    <body id="pizzacursorbody">
+
+<!-- 
+<div></div>Divs are sort of like a 'box' to put things in. In my case, this was extra text.
+-->
+         
+     <div>
+        <header>
+            <h1>
+                Welcome to my page!
+            </h1>
+        </header><!--
+            <button></button> Is pretty much on the tin. Adds a button to press.
+            The id for all these are different so I may change their looks apart from each other.
+                           
+            Reminder on how to ID:
+            When I made these in the .css sheet, I typed:
+            
+            #button1{}
+            #button2{}
+            #button3{}
+            
+            I filled each {space} with the items I wanted to change, such as border or color.
+                            
+            Below, I link to another page I created in HTML in the last <button> tag.
+
+                The <nav> is my navigation; where I want to stick all my navigation elements.
+                    In this case I have all my elements on the top right of the page; using another id I could do
+                    the opposite as well if I desired.
+            -->
+            <nav>
+                          <a href="more waffles.html">
+                            <button id="button3">
+                                <h2>Feed me waffles!</h2>
+                            </button>
+                        </a><br><br>
+                        <a href="Game.html">
+                            <button id="button3">
+                                <h2>Play a game?</h2>
+                            </button>
+                        </a><br>
+                        <br>
+                        <a href="boards.html">
+                            <button id="button3">
+                                <h2>Degree Info!</h2>
+                            </button>
+                        </a><br><br>
+                        <a href="Palindromes.html">
+                            <button id ="button3">
+                                <h2>Palindromes!</h2>
+                            </button>
+                        </a>
+                    </nav>
+    </div>
+     <br>
+     <br>
+
+     
+<!--
+<center></center> This centers the text; Eventually I plan to have this done via css, but for now I use it as I'm comfortable with it.
+<h1></h1> is a heading type text. Very big text!
+
+Also, the id addition to lines I use in the rest of this document are merely for styling reasons.
+These are made via the css stylesheet using #X, where X is the name I give the id.
+Using these, I can make multiple different styles for different ids I would like to use.
+
+After this <div> below, I use <img src="">, this allows me to link an image from either online or through my documents.
+For the sake of this class, I linked from my own documents.
+
+By adding style = "" to an html I can manipulate its style within html itself to a certain degree.
+I use this to change the size of the waffle above my two buttons.
+My two buttons both have functions on them, and I know that they both have music associated names, but that
+is just because I began my music assignment beforehand. I'll make sure to edit everything out in the javascript
+so you won't be able to overlap music, and also add different calls to functions depending on what assignment I'm 
+submitting. I do apologize if it's a little confusing; just know that I can sniff through my work solidly. 
+There's a method to my chaos.
+
+Anyway, the start button will call my startMusic function from my script.
+My stop button will call my stopMusic function from my script.
+I lazily center them with <center> tags; they were leaning just a hair to the right and I couldn't be too bothered with it.
+-->
+
+            <div id="div-diff1"><img src="OKSZ.gif" id="hesdancing"> 
+            
+            <h1 id="h1-diff">Do you like waffles?</h1>
+            <img src="waffle.gif" style="width: 150px;" onclick="hemadeyouWaffles()" id="hovermouseHere"/>           
+           <br><br><br> <!--Breaks-->
+            <center><button id="start" onclick="startMusic()">Yes!</button>
+            <button id="stop" onclick="stopMusic()">No way!</button></center>
+        </div>   
+<!--
+<br> Merely adds a break between spaces. 
+This one below was used to seperate this <div> from the last <div>, leaving a nice gap.
+
+The reason I do not seperate with <p> is because I accidentally made style properties for <p>
+that would NOT have done well inside of this <div> ID. 
+As such, I use <br> like <p> to seperate my paragraphs until I add an ID to <p> that will give me the same 
+    text results as if it were on this <div> ID.
+
+        the onclick = wafflesong() links to my function, which will create a new object when a user clicks the text element.
+        (or whatever the function is linked to that has an onclick = "").
+        In this case, I wanted the text to be a sort of cheeky easter egg type deal where if the user
+        clicks on it, it will play the song the lyrics are from.
+
+        I also have this type of function linked to the buttons above, where one can restart the page to stop it, but
+        I figured since the text just changes here and the song is less than 40 seconds it truly didn't matter all too
+        much. So long as a person isnt streaming my webpage or something, copyrights probably won't hit em.
+
+        In addition, the text changes color on hover through the css file. Just for fun.
+-->
+                <br>
+            
+                <div id="div-diff1">
+                    <p id = "p-linkdiff" onclick="wafflesong()">  Do you like waffles?
+                        Yeah, we like waffles
+                        Do you like pancakes?
+                        Yeah, we like pancakes
+                        Do you like French toast?
+                        Yeah, we like French toast
+                        Doo-doo-doo-doo
+                        Can't wait to get a mouthful
+                        <br><br>
+                        Waffles
+                        Waffles
+                        Waffles
+                        Wa-
+                        Doo-doo-doo-doo
+                        Can't wait to get a mouthful
+                        Do you like waffles?
+                        Yeah, we like waffles
+                        Do you like pancakes?
+                        Yeah, we like pancakes
+                        Do you like French toast?
+                        Yeah, we like French toast
+                        Doo-doo-doo-doo
+                        Can't wait to get a mouthful<br><br></p>
+                                           
+                </div>
+<br>
+<br>
+<div id="div-diff2">
+<h1 id="h1-diff">Delicious recipes!</h1><center>
+    <!--Below, I start a table. I've done this before, but I'll still explain it for myself and whoever wants to spot 
+    my code walls.
+    I give it the id of tablestag as this technically counts for the corder itself around the table. The <th> and <td> tags are
+        inside of it which is why they werent really effected.
+        If you look into the css I only really mess with the border radius to give it that curve. Same goes for greatwaffles.
+        I'm leaving greatwaffles alone until I want to mess with it a bit later; I often find myself wanting to edit more
+        at later dates, so that's just a service to myself at this point.
+        
+        Anyway. Below is the table where I list delicious pancake and waffle recipes I like.
+        I ask that my whole table will only take up about 85% of the entire screen with width = "". 
+        I ask my border = 4 px.
+        
+        To start with, I creat the <thead>, which is the headers for each column I wish to create. In this case,
+            I create 5 to store some tasty items. I also ask that each column only take up 20% of the total width of my table.
+            Then I add my columns. I could add a style tag for them like the lecture, but I found it was more fun to
+            link it all to the stylesheets using ids.-->
+<table id="tablestag" border="4" width="85%">
+
+<thead>
+
+<th id="greatwaffles" style="width: 20%;">Fluffy waffles</th>
+<th id="greatwaffles" style="width: 20%;">2-ingredient banana pancakes</th>
+<th id="greatwaffles" style="width: 20%;">Belgian waffles</th>
+<th id="greatwaffles" style="width: 20%;">Orange waffles</th>
+<th id="greatwaffles" style="width: 20%;">Potato waffles</th>
+
+<col id="lightgreenbck">
+<col id="darkgreenbck">
+<col id="lightgreenbck">
+<col id="darkgreenbck">
+<col id="lightgreenbck">
+
+</thead>
+<!--Below I finally create the body of my table. <tbody>.
+    <tr> is my table row. I make 5 of them to match up with the <th> above, so it all lines up in the end.
+        I add an id to my <tr> in order to get my :hover in css to work. I wanted some sort of interactive
+            experience between the user and the table. I then make another table row <tr> to list the ingredients, and how to
+                make the dish. This is a huge text wall, but that's all it really is until I finally say to end the tbody.
+                In short: <tr> is a row that is horizontal. <td> is saying that I want to insert data in each spot between
+                    my <th>, <col>, and my <tr> spaces. So basically, what I want to put inside my boxes.-->
+<tbody>
+<tr id="row1w">
+    <td>Time to make: About 25 mins</td> 
+    <td>Time to make: About 15 mins</td>
+    <td>Time to make: About 30 mins.</td>
+    <td>Time to make: About 20 mins.</td>
+    <td>Time to make: About 25 mins.</td>
+</tr>
+<tr id="row1w">
+    <td><br>1. All purpose flour<br><br>
+       2. Granulated sugar<br><br>
+        3. Baking powder<br><br>
+        4. Salt<br><br>
+        5. Butter<br><br>
+        6. Milk<br><br>
+       7. Eggs<br><br>
+       8. Vanilla extract</td>
+    <td><br>1 ripe banana<br><br>
+        2 large eggs<br><br>
+        Butter or oil, for cooking (optional!)<br>
+    </td>
+    <td>
+        <br> 1. All-purpose flour<br><br>
+       2. Eggs<br><br>
+       3. Whole milk<br><br>
+       4. butter<br><br>
+       5. sugar<br><br>
+    </td>
+    <td>
+<br>1. cake flour<br><br>
+2. baking powder<br><br>
+3. sugar<br><br>
+4. salt<br><br>
+5. grated orange rinds<br><br>
+6. orange juice<br><br>
+7. 2 eggs<br><br>
+8. melted butter<br><br>
+9. milk<br><br>
+10. lemon juice<br><br>
+</td>
+ <td><br>
+   1. 2 tablespoons butter<br><br>
+  2.  1 onion, chopped<br><br>
+  3.  1 tablespoon minced garlic<br><br>
+  4.  2 cups mashed potatoes<br><br>
+ 5.   2 large eggs<br><br>
+  6.  ¼ cup all-purpose flour<br><br>
+  7.  ¼ teaspoon salt<br><br>
+  8.  ¼ teaspoon ground black pepper<br><br></td>
+</tr>
+<tr id="row1w">
+    <td><br>1. Combine dry ingredients.<br><br>
+        2. Melt butter and add milk to it.
+        <br><br>3. Combine wet ingredients.<br>
+       <br>4. Add wet ingredients to dry ingredients. gently stir, but don't overmix it!<br>
+       <br>5. Cook your waffles.<br>
+        <br>6. Serve and eat! <b>YUMMY!</b><br></td> 
+    <td><br>1. Mash the banana.<br><br>
+ 2. Add flavorings (if desired).<br><br>
+3. Stir in the eggs. <br><br>
+4. Heat a pan over medium heat.<br><br>
+5. Drop the batter on hot griddle. About 2tbps is enough usually.<br><br>
+5. Cook for about 1 minute.<br><br>
+6. (optional) Sprinkle with toppings before you flip them.<br><br>
+7. Cook for about 1 minute on each side unless you like crispy bites!<br><br>
+8. Enjoy your delicious pancakes!!!<br>
+    </td>
+    <td><br>1. In a bowl, whisk together the flour, sugar and baking powder.<br><br>
+        2. In another bowl, lightly beat the egg yolks. Add the milk, butter and vanilla, and whisk well.<br><br>
+        3. Stir the wet ingredients into the dry ingredients just until they’re combined.<br><br>
+        4.Using a hand mixer (or all of your arm strength, with a very clean whisk), beat the egg whites until stiff peaks form.<br><br>
+        5. Gently fold the egg whites into the batter so you don’t knock out too much air—it’s OK if there are a few lumps.<br><br>
+        6. Step 3: Cook the waffles, preferably in a belgian waffle maker (belgian waffles have bigger indents. so this is important)<br><br>
+        7. Enjoy some yummy yummy yummmmyy waffles :)
+       
+    </td>
+    <td><br>1. sift 1 1/2 cups cake flour<br><br>
+
+        2. resift with 1 tsp baking powder, 1 tbsp sugar and 1/2 tsp salt<br><br>
+        
+        3. add 1 tbsp grated orange rind<br><br>
+        
+       4. beat 2 egg yolks in a separate bowl until light<br><br>
+        
+      5. then add and beat 5 tbsp melted butter, 1/2 cup of milk, 1/2 cup of orange juice, and 1 tsp lemon juice<br><br>
+        
+       6. beat 2 egg whites until stiff but not dry, then fold them lightly into the batter<br><br>
+
+        7. Cook it and serve.<br><br>
+    
+    I know it seems weird but its ALSO yummy!</td>
+    <td><br>
+        1. Melt butter in a skillet over medium heat. <br><br>
+        2. Add onion and garlic; cook and stir until onion is tender, 5 to 7 minutes.<br><br>
+        3. Preheat a waffle iron according to manufacturer's instructions.<br><br>
+        4. Combine onion mixture, mashed potatoes, eggs, flour, salt, and black pepper in a large bowl until well blended.<br><br>
+        5. Scoop 1/4 to 1/2 cup batter (depending on size of waffle iron) into the center of waffle iron and close lid. 
+        <br><br>6. Cook until golden brown, 3 to 5 minutes.<br><br>
+    DELICIOUS! Good with ketchup :)</td>
+</tr>
+
+</tbody>
+</table>
+</center>
+<!--And finally, I end the table altogether, after my tbody.-->
+
+</div>
+            
+<!--
+Below are more <img src="">, but this time I edit both the width and height.
+I use style-"" to grab the 'float' line, which enables me to make an image 'float' to the position I want.
+In this case, I have one on the right and one on the left.
+-->
+            <img src="200w.gif" width="150" height="150" style="float:left">
+            <img src="invader-zim-gir-invader-zim.gif" width="150" height="150" style="float:right">
+
+<!--
+Below here is the <footer> code, in which anything inside it will appear on the bottom of the page. 
+    In this case, still inside the <body> tags.
+-->
+
+<footer>
+    <p-diff">
+    Kristi Zwiener
+    <br>
+    University of Advancing Technology
+    <br>
+    2625 W Baseline Rd
+    <br>
+    Tempe, Arizona 85283
+    <br>
+</p>
+</footer>
+        </body>
+
+<!--
+Below I left a single-line comment for myself from the lecture I'd watched.
+Adding a popup text later would be fun, especially if I can tie it to one button.
+-->
+
+<script>
+
+//*use alert ("words") when need a popup alert (this is a single line comment)
+
+</script>
+<nav id = "othernav"><button id = "buttonlog" onclick="logout()">log out</button></nav>
+
+
+<!--
+
+I also add the image of our waffles that will fly across our screen. These guys are all stacked onto eachother.
+I also have them sized a bit smaller than my previous waffle; this way it's not to detrimental for when users
+want to click on something in the page. Sometimes 500 miliseconds of waffles flying to a corner of your page
+might be just too long for some users.
+
+-->
+
+<img id="tinywaffleindex" src="waffle.gif" style="position: absolute; left: 100; top:100; width: 100px;"/>
+<img id="tinywaffleindex2" src="waffle.gif" style="position: absolute; left: 100; top:100; width: 100px;"/>
+<img id="tinywaffleindex3" src="waffle.gif" style="position: absolute; left: 100; top:100; width: 100px;"/>
+<img id="tinywaffleindex4" src="waffle.gif" style="position: absolute; left: 100; top:100; width: 100px;"/>
+
+
+</html>
